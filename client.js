@@ -16,14 +16,16 @@ const connect = function () {
 
   conn.on("connect", () => {
     console.log("Connection established!");
-    conn.write("Name: WJF");
   });
   
+  conn.write("Name: WJF");
+  // Testing, do not want snake to move immediately
   // conn.write("Move: up");
   // var timeoutID = setTimeout(() => {"Move: right"}, 2000);
   
   
   return conn;
 };
+
 
 module.exports = connect;
