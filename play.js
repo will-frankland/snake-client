@@ -6,7 +6,7 @@ setupInput = require("./input");
 console.log("Connecting ...");
 connect();
 
-setupInput(); 
+setupInput(connect()); 
 
 // Moved to input for exercise
 // const setupInput = function () {
