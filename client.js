@@ -1,4 +1,5 @@
 const net = require("net");
+const clients = [];
 
 
 // establishes a connection with the game server
@@ -11,8 +12,17 @@ const connect = function () {
   conn.setEncoding("utf8");
   conn.on("data", (data) => {
     console.log(data);
-  })
+  });
 
+  conn.on("connect", () => {
+    console.log("Connection established!");
+
+    
+  });
+  
+  conn.write("Name: WJF");
+  
+  
   return conn;
 };
 
